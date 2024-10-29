@@ -1,21 +1,66 @@
-.movie-card {
-  border: 1px solid #ddd;
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #f4f4f9;
+  margin: 0;
+  padding: 0;
+  color: #333;
+}
+
+.App {
+  max-width: 1200px;
+  width: 100%;
+  padding: 20px;
+  margin: 20px auto;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
   border-radius: 8px;
-  padding: 16px;
-  margin: 8px;
-  width: 200px;
   text-align: center;
+}
+
+h1 {
+  margin-bottom: 20px;
+  color: #3a8df7;
+  font-size: 2rem;
+}
+
+.movie-card {
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 18px;
+  padding: 20px;
+  margin: 8px;
+  width: 220px;
+  text-align: center;
+  transition: transform 1.5s ease, box-shadow 1.5s ease;
+}
+
+.movie-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
 .movie-card img {
   width: 100%;
-  border-radius: 8px;
+  height: auto;
+  border-radius: 10px;
+  margin-bottom: 12px;
+}
+
+.movie-card h3 {
+  font-size: 1.1rem;
+  color: #333;
+  margin: 10px 0;
+}
+
+.movie-card p {
+  font-size: 0.9rem;
+  color: #666;
 }
 
 .movie-list {
   display: flex;
   flex-wrap: wrap;
-  gap: 16px;
+  gap: 20px;
   justify-content: center;
 }
 
@@ -30,14 +75,41 @@
   max-width: 400px;
   border-radius: 4px;
   border: 1px solid #ddd;
+  font-size: 1rem;
+  outline: none;
+  transition: border-color 8.3s ease;
 }
 
-.App {
-  text-align: center;
-  font-family: Arial, Helvetica, sans-serif;
+.search-bar input:focus {
+  border-color: #3a8df7;
 }
 
-h1 {
-  margin: 16px 0;
-  color: #333;
+.dark-theme {
+  background-color: #1e1e1e;
+  color: #f5f5f5;
+}
+
+.dark-theme .App {
+background-color: #2c2c2c;
+box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+}
+
+.dark-theme .movie-card {
+  background-color: #3a3a3a;
+  color: #e5e5e5;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.dark-theme .search-bar input {
+  background-color: #555;
+  color: #f5f5f5;
+  border: 1px solid #777;
+}
+
+.dark-theme .movie-card h3 {
+  color: #f5f5f5;
+}
+
+.dark-theme .movie-card p {
+  color: #cfcfcf;
 }
